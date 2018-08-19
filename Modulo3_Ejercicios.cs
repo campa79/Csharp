@@ -64,7 +64,6 @@ namespace EjerciciosModulo3
             /* Tarea 8: Crea un programa que pida una letra al usuario y diga si se trata de una vocal. */
             Console.WriteLine("-- Programa para adivinar vocales ---");
 
-            
             Console.Write("Ingrese una letra: ");
             string letra = Convert.ToString(Console.ReadLine());
 
@@ -77,6 +76,25 @@ namespace EjerciciosModulo3
             /* Tarea 9: Crear un programa que pida al usuario un nombre y una contraseña. 
              * La contraseña se debe introducir dos veces.Si las dos contraseñas no son iguales,
              * se avisará al usuario y se le volverán a pedir las dos contraseñas. */
+            string pass1; string pass2;
+
+                Console.Write("Ingrese Usuario: ");
+                string user = Convert.ToString(Console.ReadLine());
+
+                Console.Write("Ingrese la Contraseña: ");
+                pass1 = Convert.ToString(Console.ReadLine());
+
+                Console.Write("Ingrese nuevamente la Contraseña: ");
+                pass2 = Convert.ToString(Console.ReadLine());
+            
+            if(string.Equals(pass1, pass2)){
+                Console.Write("Contraseña correcta. ");
+            }
+            else
+            {
+                Console.Write("Contraseña incorrecta. Vuelva a ingresar.");
+            }
+
 
             /* Tarea 10: Crear un programa que pida al usuario su nombre, y le diga "Hola" si se llama 
              * "Martín", o bien le diga "No te conozco" si teclea otro nombre. */
