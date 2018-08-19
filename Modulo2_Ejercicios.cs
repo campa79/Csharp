@@ -10,6 +10,8 @@ namespace EjerciciosModulo2
     {
         static void Main(string[] args)
         {
+            /* ALUMNO: ALBERTO CAMPAGNA */
+            
             /*Tarea 2: Crea un programa que diga el resultado de sumar 200 y 56.*/
             int resultado = 200 + 56;
             Console.WriteLine(resultado);
