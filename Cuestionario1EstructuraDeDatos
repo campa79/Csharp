@@ -1,0 +1,29 @@
+CUESTIONARIO 1- Estructura de Datos
+18/8/18 - Alumno: Alberto Campagna
+
+1. ¿Qué es un IDE? Cite ejemplos
+Un entorno de desarrollo integrado (IDE), es un software que proporciona servicios y facilidades para el desarrollador o programador.
+Ej. Visual Studio, NetBeans, Eclipse, etc.
+
+2. ¿Qué es programación Estructurada?
+La programación estructurada es un tipo de programación (paradigma de programación) en el cual el código se escribe en forma secuencial, 
+selectiva ó repetitiva. También utiliza subrutinas.
+
+3. ¿Qué es programación Orientada a Objetos?
+Es otro tipo de paradigma de programación donde cada cosa es un objeto que puede manipular y procesar datos, interactuando entre si.
+
+4. ¿Qué es un lenguaje de bajo nivel?
+Un lenguaje de bajo nivel es aquel que puede interactuar directamente con el Hardware de la computadora. El nivel de abastracción entre 
+el lenguaje y la computadora es bajo. Se usa normalmente para programar controladores, para hacer SO, etc.
+
+5. ¿Qué es un lenguaje de alto nivel?
+Es un lenguaje que se adecua mas cómodamente al ser humano para poder generar código e instrucciones de una forma mas dinámica. No es tan 
+veloz, pero es mas conveniente para la programación en general, al ser mucho mas comprensible.
+
+6. ¿Qué es un intérprete?
+El intérprete ejecuta el programa directamente, traduciendo cada sentencia en una secuencia de una o más subrutinas ya compiladas 
+en código máquina.
+
+7. ¿Qué es un compilador?
+Un compilador es un programa informático que traduce un programa que ha sido escrito en un lenguaje de programación al lenguaje de 
+código máquina.
