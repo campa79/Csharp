@@ -10,27 +10,31 @@ namespace TPFunciones
     {
         static void Main(string[] args)
         {
-            ////////////////////////
             // PROGRAMA PRINCIPAL //
-            ////////////////////////
+            setConsola();
             menu();
 
-            ///////////////
             // FUNCIONES //
-            ///////////////
+            /// 0. CREO SETEO INICIAL DE CONSOLA ///
+            void setConsola()
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Blue;
+                Console.Title = "TP - Ejercicio 5 Funciones";
+            }
 
             /// 1. CREO LA FUNCION MENU ///
             void menu()
             {
-                Console.WriteLine(" -------------------------");
-                Console.WriteLine(" -  PROGRAMA DE PEDIDOS  -");
-                Console.WriteLine(" -------------------------");
+                Console.WriteLine(" ------------------------- ");
+                Console.WriteLine(" -  PROGRAMA DE PEDIDOS  - ");
+                Console.WriteLine(" ------------------------- ");
                 Console.WriteLine("");
-                Console.WriteLine(" 1. VER MENU DE EMPANADAS");
-                Console.WriteLine(" 2. ZONAS DE ENTREGA");
-                Console.WriteLine(" 3. HACER PEDIDO");
-                Console.WriteLine(" 4. PROMOCIONES");
-                Console.WriteLine(" 5. SALIR");
+                Console.WriteLine(" 1. VER MENU DE EMPANADAS  ");
+                Console.WriteLine(" 2. PROMOCIONES            ");
+                Console.WriteLine(" 3. HACER PEDIDO           ");
+                Console.WriteLine(" 4. ZONAS DE ENTREGA       ");
+                Console.WriteLine(" 5. SALIR                  ");
                 Console.WriteLine("");
 
                 Console.Write(" Ingrese Una Opción: ");
@@ -47,7 +51,7 @@ namespace TPFunciones
                         break;
 
                     case 2:
-                        Console.WriteLine("Ingresaste opción 2. ZONAS DE ENTREGA");
+                        Console.WriteLine("Ingresaste opción 2. PROMOCIONES");
                         menu();
                         break;
 
@@ -57,7 +61,7 @@ namespace TPFunciones
                         break;
 
                     case 4:
-                        Console.WriteLine("Ingresaste opción 4. PROMOCIONES");
+                        Console.WriteLine("Ingresaste opción 4. ZONAS DE ENTREGA");
                         menu();
                         break;
 
