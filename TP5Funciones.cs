@@ -10,11 +10,18 @@ namespace TPFunciones
     {
         static void Main(string[] args)
         {
+            ////////////////////////
             // PROGRAMA PRINCIPAL //
+            ////////////////////////
             setConsola();
             menu();
 
+            ///////////////////////////////////////////////////////////////////////////////
+
+            ///////////////
             // FUNCIONES //
+            ///////////////
+
             /// 0. CREO SETEO INICIAL DE CONSOLA ///
             void setConsola()
             {
@@ -31,8 +38,8 @@ namespace TPFunciones
                 Console.WriteLine(" ------------------------- ");
                 Console.WriteLine("");
                 Console.WriteLine(" 1. VER MENU DE EMPANADAS  ");
-                Console.WriteLine(" 2. PROMOCIONES            ");
-                Console.WriteLine(" 3. HACER PEDIDO           ");
+                Console.WriteLine(" 2. HACER PEDIDO           ");
+                Console.WriteLine(" 3. PROMOCIONES            ");
                 Console.WriteLine(" 4. ZONAS DE ENTREGA       ");
                 Console.WriteLine(" 5. SALIR                  ");
                 Console.WriteLine("");
@@ -44,6 +51,7 @@ namespace TPFunciones
                 switch (opcionSwitch)
                 {
                     case 1:
+                        LimpiarPantalla();
                         Linea();
                         MenuEmpandas();
                         Linea();
@@ -51,17 +59,17 @@ namespace TPFunciones
                         break;
 
                     case 2:
-                        Console.WriteLine("Ingresaste opción 2. PROMOCIONES");
+                        Console.WriteLine("OPCION 2 - HACER PEDIDO");
                         menu();
                         break;
 
                     case 3:
-                        Console.WriteLine("Ingresaste opción 3. HACER PEDIDO");
+                        Console.WriteLine("OPCION 3. PROMOCIONES");
                         menu();
                         break;
 
                     case 4:
-                        Console.WriteLine("Ingresaste opción 4. ZONAS DE ENTREGA");
+                        Console.WriteLine("OPCION 4. ZONAS DE ENTREGA");
                         menu();
                         break;
 
@@ -81,7 +89,7 @@ namespace TPFunciones
             /// 2. CREO LA FUNCION LIMPIAR PANTALLA
             void LimpiarPantalla()
             {
-                for(int i = 0; i < 100; i++)
+                for(int i = 0; i < 10; i++)
                 {
                     Console.WriteLine("");
                 }
@@ -98,23 +106,30 @@ namespace TPFunciones
             /// FUNCION OPCION 1. VER MENU DE EMPANADAS
             void MenuEmpandas()
             {
-                Console.WriteLine("   MENU DE EMPANADAS   ");
-                Console.WriteLine("- Jamón y queso");
-                Console.WriteLine("- Carne");
-                Console.WriteLine("- Pollo");
-                Console.WriteLine("- Caprese");
-                Console.WriteLine("- Verdura");
-                Console.WriteLine("- Queso y Cebolla");
+                LimpiarPantalla();
+                Console.WriteLine("--- MENU DE EMPANADAS ---");
+                Console.WriteLine("- Jamón y queso - $20");
+                Console.WriteLine("- Carne - $20");
+                Console.WriteLine("- Pollo - $20");
+                Console.WriteLine("- Caprese - $20");
+                Console.WriteLine("- Verdura - $20");
+                Console.WriteLine("- Queso y Cebolla - $20");
             }
 
-            /// FUNCION OPCION 2. ZONAS DE ENTREGA
-            /// ACA SE PROGRAMARA LA FUNCION PARA ZONAS DE ENTREGA
+            /// FUNCION OPCION 2. HACER PEDIDO
+            void HacerPedido()
+            {
+                Console.Write(" INGRESA TU NOMBRE: ");
+                string nombre;
+                nombre = Convert.ToString(Console.ReadLine());
+            }
 
-            /// FUNCION OPCION 3. HACER PEDIDO
-            /// ACA SE PROGRAMARA LA FUNCION PARA HACER PEDIDO
 
-            /// FUNCION OPCION 4. PROMOCIONES
-            /// ACA SE PROGRAMARA LA FUNCION PARA PROMOCIONES
+            /// FUNCION OPCION 3. PROMOCIONES
+
+
+            /// FUNCION OPCION 4. ZONAS DE ENTREGA
+
 
             /// FUNCION OPCION 5. SALIR
             void salir()
