@@ -13,14 +13,13 @@ namespace TPFunciones
             ////////////////////////
             // PROGRAMA PRINCIPAL //
             ////////////////////////
+            SetConsola();
             
             /// INICIALIZO VARIABLES "GLOBALES" ///
             int cantidadEmpanadas = 0;
             int totalPagar = 0;
             int jamonYQueso = 0; int carne = 0; int pollo = 0; int verdura = 0; int quesoYCebolla = 0;
-            double promo1 = 0; double promo2 = 0; double promo3 = 0; double promo4 = 0;
-
-            SetConsola();
+            double promo = 0; string nombre;
             Menu();
 
             ///////////////
@@ -36,8 +35,10 @@ namespace TPFunciones
             }
 
             /// 1. CREO LA FUNCION MENU ///
+            SetConsola();
             void Menu()
             {
+                SetConsola();
                 Console.WriteLine(" ------------------------- ");
                 Console.WriteLine(" -  PROGRAMA DE PEDIDOS  - ");
                 Console.WriteLine(" ------------------------- ");
@@ -96,6 +97,11 @@ namespace TPFunciones
                 }
             }
 
+            void Limpiar()
+            {
+                Console.Clear();
+            }
+
             /// 3. CREO LA FUNCION LINEA (Que sirve para dejar una línea en blanco y un decorado)
             void Linea()
             {
@@ -107,7 +113,8 @@ namespace TPFunciones
             /// FUNCION OPCION 1. VER MENU DE EMPANADAS
             void MenuEmpandas()
             {
-                Console.WriteLine("--- MENU DE EMPANADAS ---");
+                Limpiar();
+                Linea();
                 Console.WriteLine("- JAMON Y QUESO - $20");
                 Console.WriteLine("- CARNE - $20");
                 Console.WriteLine("- POLLO - $20");
@@ -119,8 +126,9 @@ namespace TPFunciones
             /// FUNCION OPCION 2. HACER PEDIDO
             void HacerPedido()
             {
+                Limpiar();
+                Linea();
                 Console.Write(" INGRESA TU NOMBRE: ");
-                string nombre;
                 nombre = Convert.ToString(Console.ReadLine());
 
                 Linea();
@@ -145,8 +153,9 @@ namespace TPFunciones
                 Console.Write(" QUESO Y CEBOLLA: ");
                 quesoYCebolla = Convert.ToInt32(Console.ReadLine());
                 cantidadEmpanadas = quesoYCebolla + cantidadEmpanadas;
-                Linea();
+                Limpiar();
 
+                Linea();
                 Console.WriteLine(nombre + ", pediste " + cantidadEmpanadas + " empanadas.");
                 totalPagar = cantidadEmpanadas * 20;
                 Console.WriteLine("TOTAL A PAGAR $" + totalPagar);
@@ -174,49 +183,86 @@ namespace TPFunciones
                 switch (opcionPromo)
                 {
                     case 1:
-                        promo1 = totalPagar * 0.5;
-                        Console.WriteLine("");
-                        Console.WriteLine("EXCELENTE!, CON EL DESCUENTO PERSONAL 2x1 TOTAL A PAGAR $" + promo1);
+                        Limpiar();
                         Linea();
+                        promo = totalPagar * 0.5;
+                        Console.WriteLine("");
+                        Console.WriteLine("EXCELENTE!, CON DESCUENTO PERSONAL 2x1 TOTAL A PAGAR $" + promo);
+                        Linea();
+                        VerPedido();
                         break;
 
                     case 2:
-                        promo2 = totalPagar * 0.8;
-                        Console.WriteLine("");
-                        Console.WriteLine("EXCELENTE!, CON EL DESCUENTO CLUB LA NACION, TOTAL A PAGAR $" + promo2);
+                        Limpiar();
                         Linea();
+                        promo = totalPagar * 0.8;
+                        Console.WriteLine("");
+                        Console.WriteLine("EXCELENTE!, CON DESCUENTO CLUB LA NACION, TOTAL A PAGAR $" + promo);
+                        Linea();
+                        VerPedido();
                         break;
 
                     case 3:
-                        promo3 = totalPagar * 0.9;
-                        Console.WriteLine("");
-                        Console.WriteLine("EXCELENTE!, CON EL DESCUENTO CLARIN 365, TOTAL A PAGAR $" + promo3);
+                        Limpiar();
                         Linea();
+                        promo = totalPagar * 0.9;
+                        Console.WriteLine("");
+                        Console.WriteLine("EXCELENTE!, CON DESCUENTO CLARIN 365, TOTAL A PAGAR $" + promo);
+                        Linea();
+                        VerPedido();
                         break;
 
                     case 4:
-                        promo4 = totalPagar * 0.65;
-                        Console.WriteLine("");
-                        Console.WriteLine("EXCELENTE!, CON EL DESCUENTO ALUMNOS IFTS 18, TOTAL A PAGAR $" + promo4);
+                        Limpiar();
                         Linea();
+                        promo = totalPagar * 0.65;
+                        Console.WriteLine("");
+                        Console.WriteLine("EXCELENTE!, CON DESCUENTO ALUMNOS IFTS 18, TOTAL A PAGAR $" + promo);
+                        Linea();
+                        VerPedido();
                         break;
 
                     case 5:
+                        Limpiar();
                         Menu();
                         break;
 
                     default:
+                        Limpiar();
                         Console.WriteLine("");
-                        Console.WriteLine("Opción Inválida. Vuelva a ingresar una Opción.");
+                        Console.WriteLine("OPCION INVALIDA. VOLVE A INGRESAR UNA OPCION.");
                         Console.WriteLine("");
                         Menu();
                         break;
                 }
             }
 
+            /// FUNCION VER PEDIDO
+            void VerPedido()
+            {
+                Limpiar();
+                Linea();
+                Console.WriteLine(" PEDIDO A ENTREGAR: ");
+                Console.WriteLine("");
+                Console.WriteLine(" JAMON Y QUESO: " + jamonYQueso + " Unidades.");
+                Console.WriteLine(" CARNE: " + carne + " Unidades.");
+                Console.WriteLine(" POLLO: " + pollo + " Unidades.");
+                Console.WriteLine(" VERDURA: " + verdura + " Unidades.");
+                Console.WriteLine(" QUESO Y CEBOLLA: " + quesoYCebolla + " Unidades.");
+                Console.WriteLine("");
+                Console.Write(" TOTAL SIN PROMOCION: $" + totalPagar);
+                Console.WriteLine(" / TOTAL CON PROMOCION: $" + promo);
+                Console.WriteLine("");
+                Console.WriteLine(" MUCHAS GRACIAS POR TU PEDIDO!");
+
+                Linea();
+                Menu();
+            }
+
             /// FUNCION OPCION 4. SALIR
             void Salir()
             {
+                Limpiar();
                 Linea();
                 Console.WriteLine("Muchas gracias! Hasta luego.");
                 Linea();
