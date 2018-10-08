@@ -163,7 +163,7 @@ namespace TPFunciones
                 Console.WriteLine(" 1. PERSONAL 2x1: 50% DESCUENTO");
                 Console.WriteLine(" 2. CLUB LA NACION: 20% DESCUENTO");
                 Console.WriteLine(" 3. CLARIN 365: 10% DESCUENTO");
-                Console.WriteLine(" 4. ALUMNO IFTS 18: 35% DESCUENTO");
+                Console.WriteLine(" 4. ALUMNOS IFTS 18: 35% DESCUENTO");
                 Console.WriteLine(" 5. VOLVER AL MENU PRINCIPAL");
                 Console.WriteLine("");
 
