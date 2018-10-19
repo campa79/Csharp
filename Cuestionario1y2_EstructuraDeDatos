@@ -27,3 +27,36 @@ en código máquina.
 7. ¿Qué es un compilador?
 Un compilador es un programa informático que traduce un programa que ha sido escrito en un lenguaje de programación al lenguaje de 
 código máquina.
+
+-----------
+CUESTIONARIO 2- Estructura de Datos
+19/10/18 - Alumno: Alberto Campagna
+
+1. ¿Qué es una función? Cite un ejemplo
+En computación, una subrutina o subprograma (también llamada procedimiento, función o rutina), es un subalgoritmo que forma parte del 
+algoritmo principal, el cual permite resolver una tarea específica.
+Esta función ejecuta determinada/s acciones si es llamada y ejecutada, tantas veces como quieras. A su vez, a la función se le pueden
+pasar argumentos cuando es llamada/invocada.
+
+Ej.
+valor-devuelto nombre-función (lista-de-argumentos) {
+  sentencias;         // "cuerpo" de la función
+}
+
+2. ¿Que es una variable?
+
+
+3. ¿Que es una variable local?
+
+
+4. ¿Que es una variable global?
+
+
+5. ¿Que es una función recursiva?
+
+
+6. Definición de Array. Cite un ejemplo.
+
+
+
+
